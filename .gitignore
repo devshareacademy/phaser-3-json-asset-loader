@@ -1,0 +1,11 @@
+cypress/videos
+cypress/screenshots
+node_modules
+tsconfig.tsbuildinfo
+dist
+
+public
+tests
+src/types.ts
+src/json-asset-loader.ts
+r.md
