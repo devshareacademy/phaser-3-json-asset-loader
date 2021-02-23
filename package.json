@@ -15,8 +15,8 @@
     "prepare": "install-peers",
     "lint": "eslint src --ext ts,js,tsx,jsx",
     "clean": "rimraf dist *.tsbuildinfo",
-    "build": "tsc -b",
-    "test:start": "parcel tests/index.html -p 5000"
+    "build": "tsc -p tsconfig.build.json",
+    "test:start": "parcel examples/**/* -p 5000"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -31,6 +31,7 @@
     "eslint-config-prettier": "7.0.0",
     "eslint-plugin-prettier": "3.2.0",
     "install-peers-cli": "2.2.0",
+    "parcel": "1.12.4",
     "parcel-plugin-clean-easy": "1.0.2",
     "parcel-plugin-static-files-copy": "2.5.0",
     "prettier": "2.2.1",
@@ -50,5 +51,8 @@
   "volta": {
     "node": "14.15.1",
     "yarn": "1.22.10"
+  },
+  "dependencies": {
+    "phaser": "^3.52.0"
   }
 }

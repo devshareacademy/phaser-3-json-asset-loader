@@ -1,11 +1,11 @@
 cypress/videos
 cypress/screenshots
 node_modules
-tsconfig.tsbuildinfo
+*.tsbuildinfo
 dist
+.cache
 
-public
 tests
 src/types.ts
-src/json-asset-loader.ts
 r.md
+public
