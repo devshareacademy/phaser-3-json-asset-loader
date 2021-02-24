@@ -5,6 +5,10 @@ export default class JsonAssetLoader extends Phaser.Plugins.ScenePlugin {
     super(scene, pluginManager);
   }
 
+  public init(): void {
+    console.log('Plugin is alive');
+  }
+
   public hello(): void {
     console.log('hello world!!');
   }

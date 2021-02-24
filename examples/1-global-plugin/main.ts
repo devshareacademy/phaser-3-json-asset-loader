@@ -2,14 +2,12 @@ import * as Phaser from 'phaser';
 import * as JsonAssetLoader from '../../src';
 
 class Boot extends Phaser.Scene {
-  jsonAssetLoader!: JsonAssetLoader.JSONLoader;
-
   constructor() {
     super('Boot');
   }
 
   public preload(): void {
-    this.jsonAssetLoader.hello();
+    console.log((this.plugins.get('GlobalJsonAssetLoader') as JsonAssetLoader.GlobalJsonAssetLoader).hello());
   }
 }
 
@@ -20,7 +18,7 @@ const config: Phaser.Types.Core.GameConfig = {
   height: 600,
   scene: [Boot],
   plugins: {
-    scene: [{ key: 'jsonAssetLoaderPlugin', plugin: JsonAssetLoader.JSONLoader, mapping: 'jsonAssetLoader' }],
+    global: [{ key: 'GlobalJsonAssetLoader', plugin: JsonAssetLoader.GlobalJsonAssetLoader, start: true }],
   },
   banner: false,
   backgroundColor: 'ffffff',
